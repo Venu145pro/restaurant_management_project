@@ -19,6 +19,8 @@ from django.urls import path,include
 from django.conf.urls import handler404
 from django.shortcuts import render
 
+
+
 def custom_404_view(request, exception):
     return render(request, '404.html', status=404)
 
@@ -32,4 +34,5 @@ urlpatterns = [
     path('api/products/',include('products.urls')),
     path('api/orders/',include('orders.urls')),
 ]
+
 
